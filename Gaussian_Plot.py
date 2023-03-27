@@ -8,8 +8,8 @@ import numpy as np
 import pandas as pd
 
 # Import a data column from a .csv
-dataset = pd.read_csv('C:/Users/1107473901/Documents/Universidad de Guanajuato/Laboratorios/LabMC/Reporte 02 - Movimiento Unidimensional/Datasets/S-V.csv')
-norm_data = dataset.iloc[:, 3:4].values
+dataset = pd.read_csv('dataset.csv')
+norm_data = dataset.iloc[:, 3:4].values # You must change 
 
 # Replace the NaN data with the mean of the column
 from sklearn.impute import SimpleImputer
