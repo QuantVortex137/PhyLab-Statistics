@@ -26,4 +26,4 @@ Note: It is planned to add deep learning algorithms and ANN or RNN, as well as c
     4. Standard Deviation
 - Deep Learning
 - Artificial Neural Networks
-- Deep Symbolic Regression for Physics [[Tenachi et all]()]
+- Deep Symbolic Regression for Physics [[Tenachi et all 2023](https://arxiv.org/abs/2303.03192)]
