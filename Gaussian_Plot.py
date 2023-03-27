@@ -9,7 +9,7 @@ import pandas as pd
 
 # Import a data column from a .csv
 dataset = pd.read_csv('dataset.csv')
-norm_data = dataset.iloc[:, 3:4].values # You must change 
+norm_data = dataset.iloc[:, 3:4].values # You must change the numbers inside .iloc
 
 # Replace the NaN data with the mean of the column
 from sklearn.impute import SimpleImputer
