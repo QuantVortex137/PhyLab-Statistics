@@ -23,55 +23,6 @@ int main()
 {
     int APP, again_APP;
     
-    color(BLACK,BLUE);
-    printf("\n\t\t\t\t\t         :::::::::: :::::::::   ::::::::");
-    printf("\n\t\t\t\t\t        :+:        :+:    :+: :+:    :+:");
-    printf("\n\t\t\t\t\t       +:+        +:+    +:+ +:+        ");
-    printf("\n\t\t\t\t\t      :#::+::#   +#++:++#+  +#+         ");
-    printf("\n\t\t\t\t\t     +#+        +#+        +#+          ");
-    printf("\n\t\t\t\t\t    #+#        #+#        #+#    #+#    ");
-    printf("\n\t\t\t\t\t   ###        ###         ########      ");
-    color(BLACK,WHITE);
-    
-    //ASCII ART
-	printf("\n\n\n");
-	
-	color(BLACK,RED);
-	
-	printf("\n        :::            :::     :::::::::   :::::::: ::::::::::: ::: ::::::::::: ::::::::           ::::::::   ::::::::");
-	printf("\n       :+:          :+: :+:   :+:    :+: :+:    :+:    :+:   :+: :+:   :+:    :+:    :+:         :+:    :+: :+:    :+:");
-	printf("\n      +:+         +:+   +:+  +:+    +:+ +:+           +:+  +:+   +:+  +:+    +:+                +:+        +:+    +:+ ");
-	printf("\n     +#+        +#++:++#++: +#++:++#+  +#++:++#++    +#+ +#++:++#++: +#+    +#++:++#++         +#+        +#+    +:+  ");
-	printf("\n    +#+        +#+     +#+ +#+    +#+        +#+    +#+ +#+     +#+ +#+           +#+         +#+        +#+    +#+   ");
-	printf("\n   #+#        #+#     #+# #+#    #+# #+#    #+#    #+# #+#     #+# #+#    #+#    #+#         #+#    #+# #+#    #+#    ");
-	printf("\n  ########## ###     ### #########   ########     ### ###     ### ###     ########           ########   ########      ");
-	
-	printf("\n\n");
-	
-	printf("\n\t\t\t                                                       ___");
-	printf("\n\t\t\t                                                   ,o88888 ");
-	printf("\n\t\t\t                                                ,o8888888' ");
-	printf("\n\t\t\t                          ,:o:o:oooo.        ,8O88Pd8888'  ");
-	printf("\n\t\t\t                      ,.::.::o:ooooOoOoO. ,oO8O8Pd888""    ");
-	printf("\n\t\t\t                    ,.:.::o:ooOoOoOO8O8OOo.8OOPd8O8O´      ");
-	printf("\n\t\t\t                   , ..:.::o:ooOoOOOO8OOOOo.FdO8O8'        ");
-	printf("\n\t\t\t                  , ..:.::o:ooOoOO8O888O8O,COCOO´          ");
-	printf("\n\t\t\t                 , . ..:.::o:ooOoOOOO8OOOOCOCO'            ");
-	printf("\n\t\t\t                  . ..:.::o:ooOoOoOO8O8OCCCC*o             ");
-	printf("\n\t\t\t                     . ..:.::o:ooooOoCoCCC*o:o             ");
-	printf("\n\t\t\t                     . ..:.::o:o:,cooooCo*oo:o:            ");
-	printf("\n\t\t\t                  `   . . ..:.:cocoooo*'o:o:::'            ");
-	printf("\n\t\t\t                  .`   . ..::ccccoc*'o:o:o:::'             ");
-	printf("\n\t\t\t                 :.:.    ,c:cccc*':.:.:.:.:.'              ");
-	printf("\n\t\t\t               ..:.:*'`::::c:*'..:.:.:.:.:.'               ");
-	printf("\n\t\t\t             ...:.'.:.::::*'    . . . . .'                 ");
-	printf("\n\t\t\t            .. . ....:.*' `   .  . . ''                    ");
-	printf("\n\t\t\t          . . . ....'´                                     ");
-	printf("\n\t\t\t          .. . .´'       -hrr-                             ");
-	printf("\n\t\t\t         .                                                 ");
-	
-	color(BLACK,WHITE);
-    
     color(BLACK,RED);
     printf("\n\n\n=============================================  Welcome to LabStats Co.!  =============================================");
     printf("==========================================================================================================================");
@@ -107,16 +58,6 @@ int main()
 		{
 			system("cls");
 			printf("\n\n\t\tThank you for using FCP LabStats, see you soon!\n\n");
-			color(BLACK,BLUE);
-			printf("\n\t\t     ::::::::::: :::    ::: :::    :::");
-			printf("\n\t\t        :+:     :+:    :+: :+:    :+: ");
-			printf("\n\t\t       +:+     +:+    +:+  +:+  +:+   ");
-			printf("\n\t\t      +#+     +#++:++#++   +#++:+     ");
-			printf("\n\t\t     +#+     +#+    +#+  +#+  +#+     ");
-			printf("\n\t\t    #+#     #+#    #+# #+#    #+#     ");
-			printf("\n\t\t   ###     ###    ### ###    ###      ");
-			color(BLACK,WHITE);
-			printf("\n");
 		}
 	}
 	while(again_APP==1);
