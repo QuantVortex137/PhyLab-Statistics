@@ -24,16 +24,10 @@ int main()
     int APP, again_APP;
     
     color(BLACK,RED);
-    printf("\n\n\n=============================================  Welcome to LabStats Co.!  =============================================");
-    printf("==========================================================================================================================");
+    printf("\n\n\n=============================================  Linear Modeling in C  =============================================");
+    printf("==================================================================================================================");
 	color(BLACK,WHITE);
-    printf("\n\nThis app can be used to solve statistical data for classical mechanics experiments.");
-    color(BLACK,RED);
-	printf("\n\nLabStats Co.");
-	color(BLACK,WHITE);
-    printf("is a dedicated APP to solve lineal correlation and regression calculus for your experiments.");
-    printf("\n\nHere you can do the correlation and regression calculations of your laboratory data.\n\n");
-    
+    printf("\n\tPress any key to continue...");
     system("pause");
     system("cls");
     
@@ -57,7 +51,7 @@ int main()
 		else if(again_APP==2)
 		{
 			system("cls");
-			printf("\n\n\t\tThank you for using FCP LabStats, see you soon!\n\n");
+			printf("\n\n\t\tThank you for using Linear Modeling in C, see you soon!\n\n");
 		}
 	}
 	while(again_APP==1);
@@ -75,8 +69,6 @@ int LabStats()
 	float px, py, pxx, pyy, pxy; //Average of X and Y
 	float sum_X=0, sum_Y=0, sum_XX=0, sum_YY=0, sum_XY=0; //Sums of the values
 	float S, I, r_xy, r_sqrd, devY[100], Ysum_var, Ysigma2, Ysigma, devX[100], Xsum_var, Xsigma2, Xsigma; //Slope and Intersection
-	
-	printf("\nProcessing...");
 	
 	//Subrutina necesaria para leer todos los datos de los pares ordenados obtenidos en una estadística
     do 
