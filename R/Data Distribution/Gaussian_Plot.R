@@ -1,16 +1,16 @@
-# Importar archivo csv
-datos <- read.csv("ruta/al/archivo.csv")
+# Import data from csv
+data <- read.csv("dataset.csv")
 
-# Crear histograma de la columna "datos"
-hist(datos$columna, main="Distribución de los datos", xlab="Valores")
+# Create histogram for data
+hist(data$column, main="Data Distribution", xlab="Values")
 
-# Calcular media y desviación estándar
-media <- mean(datos$columna)
-desviacion <- sd(datos$columna)
+# Calculate mean and standard deviation
+mu <- mean(data$column)
+sigma <- sd(data$column)
 
-# Crear vector de valores para la curva de distribución normal
-valores <- seq(min(datos$columna), max(datos$columna), length=100)
-curva <- dnorm(valores, mean=media, sd=desviacion)*length(datos$columna)
+# Crear vector of values for the normal distribution curve
+values <- seq(min(data$column), max(data$column), length=100)
+curve <- dnorm(values, mean=mu, sd=sigma)*length(data$column)
 
-# Agregar curva de distribución normal al histograma
-lines(valores, curva, col="blue", lwd=2)
+# Add the normal distribution curve to the histogram
+lines(values, curve, col="blue", lwd=2)
