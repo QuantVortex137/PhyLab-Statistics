@@ -1,0 +1,14 @@
+By KONRAD BANACHEWICZ, in Kaggle
+
+A collection of tweets with the hashtag #GPT4 : discussions about the GPT4 language model, 
+sharing experiences with using GPT4, or asking for help with GPT4-related issues. 
+The tweets could also include links to articles or websites related to GPT4, as well as images, 
+videos, or other media. Overall, a collection of tweets with the hashtag #GPT4 would provide 
+a glimpse into the online conversation surrounding GPT4.
+
+KB: The description above was generated with ChatGPT about GPT4 - getting meta, I know ;-)
+
+================ IMPORTANT ================
+To get the updated data go to the url:
+
+https://www.kaggle.com/datasets/konradb/gpt4-the-tweets

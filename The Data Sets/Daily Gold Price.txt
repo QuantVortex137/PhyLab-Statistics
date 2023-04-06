@@ -1,0 +1,15 @@
+By ARSLANR369, in Kaggle
+
+Tracking the Fluctuations: Daily Gold Prices from 2018 to 2023.
+
+This dataset contains daily gold prices from April 2018 to March 2023.
+Gold is a precious metal that is widely used as a store of value, a hedge against inflation, 
+and a safe haven asset in times of economic uncertainty. The dataset includes the daily opening, 
+closing, highest, and lowest prices, as well as the volume of gold traded on each day. 
+This data could be useful for investors, analysts, and researchers interested in studying 
+the fluctuations of gold prices over time and their relation to economic and geopolitical events.
+
+================ IMPORTANT ================
+To get the updated data go to the url:
+
+https://www.kaggle.com/datasets/arslanr369/daily-gold-price-2018-2023

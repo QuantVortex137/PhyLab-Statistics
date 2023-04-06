@@ -1,0 +1,42 @@
+By PRATHAM SARAF, in Kaggle
+
+About Dataset
+Spotify Global Top 50 (Daily Update)
+
+Context
+Spotify is one of the most popular music streaming platforms in the world. Every day, 
+the platform curates a list of the top 50 most streamed songs from around the globe. 
+This dataset provides information about these top 50 songs, including their names, 
+the artists who performed them, the album name, release date, track popularity, track duration, 
+and more.
+
+Disclaimer
+This dataset is only used for research purposes, users must abide by the relevant laws and 
+regulations of their location, please do not use it for illegal purposes. 
+The user shall bear all the consequences caused by illegal use.
+
+Content
+The dataset contains information about the top 50 most streamed songs on Spotify, 
+including their track name, artist name, album name, release date, duration, popularity, 
+explicit lyrics, and images of the album cover art.
+
+The data is available in CSV format and is updated daily. The dataset can be used to analyze 
+trends in global music streaming, track the popularity of individual songs and artists, 
+and gain insights into the preferences of Spotify users around the world.
+
+Apart from this the images folder contains the cover art in 640 * 640 image size with the 
+naming convention {trackname}_{name_of_artist[0]}
+
+Inspiration
+This dataset can be used by music enthusiasts, researchers, and data scientists to gain insights 
+into the music industry, track trends, and discover new and popular artists. 
+It can also be used to develop recommendation systems for music streaming platforms, 
+understand the preferences of users, and predict the success of new songs and albums.
+
+=============== IMPORTANT ===============
+To find the updated data, as well as the album covers, go to the url:
+
+https://www.kaggle.com/datasets/prathamsaraf1389/spotify-global-top-50-daily-update?select=images
+
+
+

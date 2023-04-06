@@ -1,0 +1,6 @@
+By IVAN LEE, in Kaggle.
+
+Source: https://data.calgary.ca/Environment/Solar-Photovoltaic-Sites/csgq-e555
+
+The hourly output at each of the city of Calgary's solar photovoltaic projects 
+and the locations of City of Calgary solar photovoltaic installations.
