@@ -27,3 +27,5 @@ Little by little the volume of the content of this repository will be increased,
 - Deep Learning
 - Artificial Neural Networks
 - Deep Symbolic Regression for Physics [[Tenachi et all 2023](https://arxiv.org/abs/2303.03192)]
+
+🦄
