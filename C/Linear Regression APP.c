@@ -64,13 +64,11 @@ int LabStats()
 	int n, i, j, k, l, m, CONFIRM_DATA; //Step 1-3 vars n=number of ordered pairs, i,j,k,l,m=counters for arrays, confirm data
 	float x[100], y[100]; //Step 1-3 vars
 	
-	// x, y, xy=x*y, p = promedio de algo, sum = suma de algo, xx=x^2, yy=y^2
 	float xx[100], yy[100], xy[100]; //First calculations with data
 	float px, py, pxx, pyy, pxy; //Average of X and Y
 	float sum_X=0, sum_Y=0, sum_XX=0, sum_YY=0, sum_XY=0; //Sums of the values
 	float S, I, r_xy, r_sqrd, devY[100], Ysum_var, Ysigma2, Ysigma, devX[100], Xsum_var, Xsigma2, Xsigma; //Slope and Intersection
 	
-	//Subrutina necesaria para leer todos los datos de los pares ordenados obtenidos en una estadística
     do 
     {
 	    //Determinate the number of ordered pairs "n"
