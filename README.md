@@ -17,8 +17,16 @@ Little by little the volume of the content of this repository will be increased,
     2. Multiple Linear Regression
     3. Polynomial Linear Regression
     4. Support Vector for Regression (SVR)
-    5. Decision Tree Clasification
-    6. Random Forest Classification
+    5. Decision Tree
+    6. Random Forest
+- Data Classification
+    1. Logistic Regression
+    2. K Nearest Neighbors (K-NN)
+    3. Support Vector Machine (SVM)
+    4. Kernel SVM
+    5. Naive Bayes
+    6. Decision Tree Classification
+    7. Random Forest Classification
 - Statistical Data Distribution
     1. Gaussian or Normal Distribution
     2. Poisson Distribution
