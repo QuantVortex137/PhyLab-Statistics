@@ -8,7 +8,7 @@ dataset = dataset[, 2:3] # Filtrar el dataset
 lin_reg = lm(formula = Dependent_var ~ .,
              data = dataset)
 
-# AJUSTAR modelo de regresión POLINOMIAL con el dataset
+# Adjust polynomial regression model
 dataset$ind_var2 = dataset$ind_var^2
 dataset$ind_var3 = dataset$ind_var^3
 dataset$ind_var4 = dataset$ind_var^4
