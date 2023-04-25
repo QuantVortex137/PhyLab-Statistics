@@ -1,53 +1,47 @@
 # Multiple Linear Regression
 
-## Import datasets, the .csv file
-dataset = read.csv('50_StartupsR.csv')
+dataset = read.csv('dataset.csv')
 
-## Categorical data encoding
-dataset$State = factor(dataset$State,
-                         levels = c("New York", "California", "Florida"),
+# Categorical data encoding
+dataset$column_categorical = factor(dataset$column_categorical,
+                         levels = c("cat_1", "cat_2", "cat_3"),
                          labels = c(1, 2, 3))
 
-## Divide data in training and test sets
-# Run this to install a package from the script: install.packages("caTools")
+# Divide data in training and testing sets
 library(caTools)
 set.seed(123)
-split = sample.split(dataset$Profit, SplitRatio = 0.8)
+split = sample.split(dataset$dependentvar_column, SplitRatio = 0.8)
 training_set = subset(dataset, split == TRUE)
 testing_set = subset(dataset, split == FALSE)
 
 # No se necesita escalar variables
 
-# Ajustar el modelo de Regresión Lineal Múltiple con el training set
-# formula = Profit ~ . significa que la variabl dependiente Profit está en función de todas las otras variabels
-regression = lm(formula = Profit ~ .,# R.D.Spend + Administration + Marketing.Spend + ... + n.VariblesIndependientes
+# Adjust multiple linear regression to training set
+regression = lm(formula = dependentvar_column ~ .,# columnvar_1 + columnvar_2 + columnvar_3 + ... + columnvar_n
                 data = training_set)
 
-# Para obtener un resumen estadístico de la RLM se puede escribir el comando
-# summary(regression) en consola o en el script
+summary(regression)
 
-# Predecir los resultados con el testing set
+# Predict data with testing_set
 y_pred = predict(regression, newdata = testing_set)
 
-# Construir un modelo óptimo con la eliminación hacia atrás manualmente usando TODO el conjunto de datos
+# Manual backwards elimination
 SL = 0.05
-regression = lm(formula = Profit ~ R.D.Spend + Administration + Marketing.Spend + State,
+regression = lm(formula = dependentvar_column ~ columnvar_1 + columnvar_2 + columnvar_3 + columnvar_4,
                 data = dataset)
 summary(regression)
 
-regression = lm(formula = Profit ~ R.D.Spend + Administration + Marketing.Spend,
+regression = lm(formula = dependentvar_column ~ columnvar_1 + columnvar_2 + columnvar_3,
                 data = dataset)
 summary(regression)
 
-regression = lm(formula = Profit ~ R.D.Spend + Marketing.Spend,
+regression = lm(formula = dependentvar_column ~ columnvar_1 + columnvar_2,
                 data = dataset)
 summary(regression)
 
-regression = lm(formula = Profit ~ R.D.Spend,
+regression = lm(formula = dependentvar_column ~ columnvar_1,
                 data = dataset)
 summary(regression)
 
-# Modelo --> Profit(R.D.Spend) = (8.543e-01)(R.D.Spend) + (4.903e+04) con un R Cuadrada de 0.9454
-
-# Para instalar ElemStatLearn: install.packages("https://cran.r-project.org/src/contrib/Archive/ElemStatLearn/ElemStatLearn_2015.6.26.2.tar.gz",repos=NULL, type="source")
+# For installing ElemStatLearn: install.packages("https://cran.r-project.org/src/contrib/Archive/ElemStatLearn/ElemStatLearn_2015.6.26.2.tar.gz",repos=NULL, type="source")
 library(ElemStatLearn)
