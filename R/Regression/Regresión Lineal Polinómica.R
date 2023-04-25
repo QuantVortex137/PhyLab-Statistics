@@ -4,50 +4,50 @@
 dataset = read.csv('Position_SalariesR.csv')
 dataset = dataset[, 2:3] # Filtrar el dataset
 
-# AJUSTAR modelo de regresión LINEAL con el dataset
-lin_reg = lm(formula = Salary ~ .,
+# Adjust linear regression model
+lin_reg = lm(formula = Dependent_var ~ .,
              data = dataset)
 
 # AJUSTAR modelo de regresión POLINOMIAL con el dataset
-dataset$Level2 = dataset$Level^2
-dataset$Level3 = dataset$Level^3
-dataset$Level4 = dataset$Level^4
-poly_reg = lm(formula = Salary ~ .,
+dataset$ind_var2 = dataset$ind_var^2
+dataset$ind_var3 = dataset$ind_var^3
+dataset$ind_var4 = dataset$ind_var^4
+poly_reg = lm(formula = Dependent_var ~ .,
               data = dataset)
 
-# VISUALIZACIÓN del modelo LINEAL
+# Linear model graph
 library(ggplot2)
 ggplot() +
-  geom_point(aes(x = dataset$Level, y = dataset$Salary),
+  geom_point(aes(x = dataset$ind_var, y = dataset$Dependent_var),
              color = "red") +
-  geom_line(aes(x = dataset$Level, y = predict(lin_reg, newdata = dataset)),
+  geom_line(aes(x = dataset$ind_var, y = predict(lin_reg, newdata = dataset)),
             color = "blue") +
-  ggtitle("Predicción lineal del sueldo en función del nivel del empleado") +
-  xlab("Nivel del empleado") +
-  ylab("Sueldo en $ usd")
+  ggtitle("Linear model") +
+  xlab("ind_var") +
+  ylab("Dependent_var")
 
 
-# VISUALIZACIÓN del modelo POLINÓMICO
+# Polynomial model graph
 library(ggplot2)
-x_grid = seq(min(dataset$Level), max(dataset$Level), 0.1)
+x_grid = seq(min(dataset$ind_var), max(dataset$ind_var), 0.1)
 ggplot() +
-  geom_point(aes(x = dataset$Level, y = dataset$Salary),
+  geom_point(aes(x = dataset$ind_var, y = dataset$Dependent_var),
              color = "red") +
   geom_line(aes(x = x_grid, y = predict(poly_reg,
-                                        newdata = data.frame(Level = x_grid,
-                                                             Level2 = x_grid^2,
-                                                             Level3 = x_grid^3,
-                                                             Level4 = x_grid^4))),
+                                        newdata = data.frame(ind_var = x_grid,
+                                                             ind_var2 = x_grid^2,
+                                                             ind_var3 = x_grid^3,
+                                                             ind_var4 = x_grid^4))),
             color = "blue") +
-  ggtitle("Predicción polinómica del sueldo en función del nivel del empleado") +
-  xlab("Nivel del empleado") +
-  ylab("Sueldo en $ usd")
+  ggtitle("Polynomial model") +
+  xlab("ind_var") +
+  ylab("Dependent_var")
 
-# PREDICCIÓN de nuevos resultados con regresión LINEAL
-y_pred = predict(lin_reg, newdata = data.frame(Level = 6.5))
+# Linear model predictions
+y_pred = predict(lin_reg, newdata = data.frame(ind_var = 137))
 
-# PREDICCIÓN de nuevos resultados con regresión POLINÓMICA
-y_PolyPred = predict(poly_reg, newdata = data.frame(Level = 6.5,
-                                                    Level2 = 6.5^2,
-                                                    Level3 = 6.5^3,
-                                                    Level4 = 6.5^4))
+# Polynomial model predictions
+y_PolyPred = predict(poly_reg, newdata = data.frame(ind_var = 137,
+                                                    ind_var2 = 137^2,
+                                                    ind_var3 = 137^3,
+                                                    ind_var4 = 137^4))
