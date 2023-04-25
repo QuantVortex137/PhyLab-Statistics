@@ -1,5 +1,5 @@
 # Import dataset
-dataset = read.csv('C:/Users/1107473901/Documents/Proyectos Software/R Studio/R Part 1 - Data pre-processing/Data1R.csv')
+dataset = read.csv('dataset.csv')
 
 # Unknown "NA" data treatment
 dataset$X_column = ifelse(is.na(dataset$X_column),
@@ -28,4 +28,3 @@ testing_set = subset(dataset, split == FALSE)
 # Values Escalating
 training_set[,2:3] = scale(training_set[,2:3])
 testing_set[,2:3] = scale(testing_set[,2:3]) # You must change the values
-
