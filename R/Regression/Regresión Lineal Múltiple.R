@@ -14,8 +14,6 @@ split = sample.split(dataset$dependentvar_column, SplitRatio = 0.8)
 training_set = subset(dataset, split == TRUE)
 testing_set = subset(dataset, split == FALSE)
 
-# No se necesita escalar variables
-
 # Adjust multiple linear regression to training set
 regression = lm(formula = dependentvar_column ~ .,# columnvar_1 + columnvar_2 + columnvar_3 + ... + columnvar_n
                 data = training_set)
