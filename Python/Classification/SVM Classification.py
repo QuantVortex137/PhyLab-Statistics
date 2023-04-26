@@ -8,7 +8,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
-dataset = pd.read_csv('C:/Users/1107473901/Documents/Proyectos Software/Python/Data Science and Statistics/Py Part 3 - Classification/Social_Network_AdsP.csv')
+dataset = pd.read_csv('dataset.csv')
 x = dataset.iloc[:, [2,3]].values # Characteristics vector
 y = dataset.iloc[:, 4].values # Predictable vector
 
