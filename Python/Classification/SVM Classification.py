@@ -33,8 +33,8 @@ from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test, y_pred)
 
 """
- cm = | aciertos var_1   errores var_1  |
-      | errores var_2    aciertos var_2 |
+ cm = | guesses var_1   errores var_1 |
+      | errores var_2   guesses var_2 |
 """
 
 # Plot algorithm results from training set
