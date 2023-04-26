@@ -1,44 +1,44 @@
 # SVM Classifier
 
-# Importar el dataset
-dataset = read.csv('Social_Network_Ads.csv')
+# Import dataset
+dataset = read.csv('dataset.csv')
 dataset = dataset[,3:5] # Resizing dataset
 
 library(caTools)
 set.seed(123)
-split = sample.split(dataset$Purchased, SplitRatio = 0.75)
+split = sample.split(dataset$dep_var, SplitRatio = 0.75)
 training_set = subset(dataset, split == TRUE)
 testing_set = subset(dataset, split == FALSE)
 
-# Escalado de valores
+# Scaling values
 training_set[,1:2] = scale(training_set[,1:2])
 testing_set[,1:2] = scale(testing_set[,1:2])
 
-# Ajustar el modelo de svm con el conjunto de entrenamiento
+# Adjust SVM model
 library(e1071)
-classifier = svm(formula = Purchased ~ .,
+classifier = svm(formula = dep_var ~ .,
                  data = training_set,
                  type = "C-classification",
                  kernel = "linear")
 
-# Predicción de los resultados con el conjunto de entrenamiento
+# Predictions
 y_pred = predict(classifier, type = "response",
                     newdata = testing_set[,-3])
 
-# Crear la matriz de confusión
+# Create confusion matrix
 cm = table(testing_set[,3], y_pred)
 
-# Visualización del conjunto de entrenamiento
+# SVM model graph
 library(ElemStatLearn)
 set = training_set
 x1 = seq(min(set[,1]) - 1, max(set[,1]) + 1, by = 0.01)
 x2 = seq(min(set[,2]) - 1, max(set[,2]) + 1, by = 0.01)
 grid_set = expand.grid(x1,x2)
-colnames(grid_set) = c('Age', 'EstimatedSalary')
+colnames(grid_set) = c('ind_var', 'dep_var')
 y_grid = predict(classifier, newdata = grid_set)
 plot(set[,-3],
      main = 'SVM (Training Set)',
-     xlab = 'Edad', ylab = 'Suedo Estimado',
+     xlab = 'ind_var', ylab = 'dep_var',
      xlim = range(x1), ylim = range(x2))
 contour(x1, x2, matrix(as.numeric(y_grid), length(x1), length(x2)))
 points(grid_set, pch = '.', col = ifelse(y_grid == 1,'springgreen3', 'tomato'))
