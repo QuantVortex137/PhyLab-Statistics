@@ -22,7 +22,7 @@ x_test = sc_x.transform(x_test)
 
 # Adjust classifier on the training set
 from sklearn.svm import SVC
-classifier = SVC(kernel = 'linear', random_state = 0)
+classifier = SVC(kernel = 'linear', random_state = 0) # kernel = 'rbf' got a better fit
 classifier.fit(x_train, y_train)
 
 # Predict results with testing set
