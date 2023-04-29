@@ -19,7 +19,7 @@ library(e1071)
 classifier = svm(formula = dep_var ~ .,
                  data = training_set,
                  type = "C-classification",
-                 kernel = "linear")
+                 kernel = "linear") # kernel = 'rbf' got a better fit
 
 # Predictions
 y_pred = predict(classifier, type = "response",
